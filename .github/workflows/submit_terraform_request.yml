@@ -1,0 +1,57 @@
+name: Submit Terraform Request
+
+# =====================================================================
+# Simulation copy of the client's submit_terraform_request.yml
+# Changes vs client original (marked with [SIM CHANGE] below):
+#   1. Target repository points to our simulated CODE repo
+#   2. Missing comma after "action" in client-payload fixed (was invalid JSON)
+#   3. dry_run sent as real boolean (was a quoted string)
+# Branch regex is intentionally UNCHANGED: ^req/(RITM[0-9]{7})$
+# =====================================================================
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        type: choice
+        options:
+          - plan
+          - apply
+      dry_run:
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Validate Branch
+        id: request
+        run: |
+          if [[ ! "${GITHUB_REF_NAME}" =~ ^req/(RITM[0-9]{7})$ ]]; then
+            echo "Branch must follow req/RITMxxxxxxx"
+            exit 1
+          fi
+          echo "request_number=${BASH_REMATCH[1]}" >> "$GITHUB_OUTPUT"
+
+      - name: Start Deployment
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.CODE_REPO_DISPATCH_TOKEN }}
+          # [SIM CHANGE 1] client value: university-of-newcastle-its/aws-standalone-ec2-instances
+          repository: dipeshmaindolia001/blazop-aws-standalone-ec2-instances
+          event-type: terraform-request
+          # [SIM CHANGE 2] comma added after "action"
+          # [SIM CHANGE 3] dry_run without quotes -> boolean
+          client-payload: |
+            {
+             "request_number":"${{ steps.request.outputs.request_number }}",
+             "config_repo":"${{ github.repository }}",
+             "config_ref":"${{ github.ref_name }}",
+             "action":"${{ inputs.action }}",
+             "dry_run":${{ inputs.dry_run }}
+            }
