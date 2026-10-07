@@ -1,0 +1,4 @@
+{
+    "terraform_code_version": "v0.1",
+    "template": "ec2"
+}
