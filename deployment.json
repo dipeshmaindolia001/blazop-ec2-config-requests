@@ -1,0 +1,68 @@
+{
+    "terraform_code_version": "v0.1",
+    "template": "ec2",
+    "order_id": null,
+    "queue_name": "callback_wait",
+    "full_payload": {
+        "order_forms_data": {
+            "customer_name": "Dipesh Maindolia",
+            "email": "dipesh.maindolia@blazop.com",
+            "phone_no": null,
+            "region": "ap-south-1",
+            "line_of_business": "HR",
+            "application_name": null,
+            "environment": null,
+            "variable_file_path": "terraform.tfvars.json",
+            "deployment_file_path": "deployment.json",
+            "template_branch": "main",
+            "request_number": "RITM0000211",
+            "workflow_name": "submit_terraform_request.yml",
+            "schema_file_path": "schema.tfvars.json",
+            "schema_branch": "main",
+            "template": "ec2",
+            "account_id": "123456789012",
+            "instance_count": null,
+            "instance_type": "t3.micro",
+            "os_type": "al2023",
+            "platform": "linux",
+            "instance_name": "demo-instance",
+            "subnet_type": "public",
+            "availability_zone": null,
+            "key_name": "my-key",
+            "iam_instance_profile": null,
+            "root_disk_size": 8,
+            "root_disk_iops": 3000,
+            "root_disk_type": "gp3",
+            "create_iam_instance_profile": false,
+            "create_default_sg": true,
+            "security_group_ids": null,
+            "schedule": null,
+            "backup_plan": null,
+            "default_tags": {
+                "App": "demo",
+                "Environment": "dev",
+                "Capability": "poc",
+                "CostCenter": "1234",
+                "Source": "blazop"
+            },
+            "metric_type": null,
+            "threshold": null,
+            "compliance": {
+                "certification": null,
+                "security_features": null
+            }
+        },
+        "additional_data": {
+            "operation": "deployment_file",
+            "github_file_commit": {
+                "success": true,
+                "operation": "create",
+                "filepath": "terraform.tfvars.json",
+                "branch": "req/RITM0000211",
+                "commit_sha": "54cca55e8296b6fb0c5638ad85e520c8a586583a"
+            }
+        },
+        "service_arch_data": {},
+        "service_cost_data": null
+    }
+}
