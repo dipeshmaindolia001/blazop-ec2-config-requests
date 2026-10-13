@@ -1,0 +1,6 @@
+{
+    "terraform_code_version": "v0.1",
+    "template": "ec2",
+    "order_id": null,
+    "queue_name": "callback_wait"
+}
