@@ -1,0 +1,6 @@
+{
+    "terraform_code_version": "v0.1",
+    "template": "ec2",
+    "order_id": "3cbae643-e58e-4582-9f1b-9d2710772817",
+    "queue_name": "callback_wait"
+}
