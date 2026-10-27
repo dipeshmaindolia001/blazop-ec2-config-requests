@@ -1,6 +1,6 @@
 {
     "terraform_code_version": "v0.1",
     "template": "ec2",
-    "order_id": "f3b51e3b-75ed-4002-a945-5c231e47c383",
+    "order_id": "9419d514-3542-431c-911c-a2673d1278c7",
     "queue_name": "github_action_callback"
 }
