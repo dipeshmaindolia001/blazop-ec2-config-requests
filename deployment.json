@@ -1,0 +1,10 @@
+{
+    "terraform_code_version": "v0.1",
+    "template": "ec2",
+    "order_id": "dd5c70f9-1001-41f2-8a33-b000a7ab93d9",
+    "queue_name": "github_action_callback",
+    "request_info": {
+        "name": "Dipesh Maindolia",
+        "email": "api.dipesh.maindolia@blazop.com"
+    }
+}
