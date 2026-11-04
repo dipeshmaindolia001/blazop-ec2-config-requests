@@ -1,10 +1,111 @@
 {
     "terraform_code_version": "v0.1",
     "template": "ec2",
-    "order_id": "66eb1283-e571-4fd1-9d40-8a031caef522",
+    "order_id": "d4141b6d-fda1-473b-b3b2-c6679b9167b0",
     "queue_name": "github_action_callback",
     "request_info": {
-        "name": "Dipesh Maindolia",
-        "email": "api.dipesh.maindolia@blazop.com"
+        "order_forms_data": {
+            "customer_name": "Dipesh Maindolia",
+            "email": "dipesh.maindolia@blazop.com",
+            "phone_no": "7017982390",
+            "region": "ap-south-1",
+            "line_of_business": "IT",
+            "application_name": "demo_app",
+            "environment": "Prod",
+            "variable_file_path": "terraform.tfvars.json",
+            "deployment_file_path": "deployment.json",
+            "template_branch": "main",
+            "request_number": "RITM0000071",
+            "workflow_name": "submit_terraform_request.yml",
+            "schema_file_path": "schema.tfvars.json",
+            "schema_branch": "main",
+            "template": "ec2",
+            "account_id": "123456789012",
+            "instance_count": 1,
+            "instance_type": "t3.micro",
+            "os_type": "al2023",
+            "platform": "linux",
+            "instance_name": "demo-instance",
+            "subnet_type": "public",
+            "availability_zone": null,
+            "key_name": "my-key",
+            "iam_instance_profile": null,
+            "root_disk_size": 8,
+            "root_disk_iops": 3000,
+            "root_disk_type": "gp3",
+            "create_iam_instance_profile": true,
+            "create_default_sg": true,
+            "security_group_ids": null,
+            "schedule": null,
+            "backup_plan": null,
+            "default_tags": {
+                "App": "demo",
+                "Environment": "dev",
+                "Capability": "poc",
+                "CostCenter": "1234",
+                "Source": "blazop"
+            },
+            "specs": [
+                {
+                    "tier": "S",
+                    "instance_type": "t3.micro",
+                    "root_disk_size": 20,
+                    "root_disk_iops": 3000,
+                    "root_disk_type": "gp3"
+                }
+            ],
+            "metric_type": "memory_used",
+            "threshold": 1,
+            "compliance": {
+                "certification": [
+                    "SOC2",
+                    "HIPAA"
+                ],
+                "security_features": [
+                    "Encrypted at Rest & Transit",
+                    "Multi-Factor Authentication"
+                ]
+            },
+            "support": [
+                {
+                    "tier": "Basic",
+                    "description": "Response in 4H\nEmail support\nBusiness hours coverage\nShared support team"
+                }
+            ]
+        },
+        "additional_data": {
+            "operation": "deployment_file",
+            "github_file_commit": {
+                "success": true,
+                "operation": "update",
+                "filepath": "terraform.tfvars.json",
+                "branch": "req/RITM0000071",
+                "commit_sha": "fbe273dc9e9945d146f36ad28f7e548905771c80"
+            }
+        },
+        "service_arch_data": {},
+        "service_cost_data": {
+            "total_cost": 0,
+            "discounts": 0,
+            "items_subtotal_cost": 0,
+            "taxes": 0,
+            "cost_items": [
+                {
+                    "item_name": "Tier - S",
+                    "purpose": "S tier costing",
+                    "total_item_cost": 0,
+                    "quantity": 1,
+                    "unit_price": 0
+                },
+                {
+                    "item_name": "Support - Basic",
+                    "purpose": "Basic support costing",
+                    "total_item_cost": 0,
+                    "quantity": 1,
+                    "unit_price": 0
+                }
+            ],
+            "additional_notes": "."
+        }
     }
 }
