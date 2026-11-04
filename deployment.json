@@ -1,7 +1,7 @@
 {
     "terraform_code_version": "v0.1",
     "template": "ec2",
-    "order_id": "a5e5073b-a3ec-40b1-a06b-21aa511d79ba",
+    "order_id": "fc76276c-ddcf-4372-ab83-98df09ebd921",
     "queue_name": "github_action_callback",
     "request_info": {
         "order_forms_data": {
@@ -71,11 +71,7 @@
                     "tier": "Basic",
                     "description": "Response in 4H\nEmail support\nBusiness hours coverage\nShared support team"
                 }
-            ],
-            "iam_role_policies": null,
-            "ebs_volumes": null,
-            "additional_tags": null,
-            "ingress_rules": null
+            ]
         },
         "additional_data": {
             "operation": "deployment_file",
@@ -84,7 +80,7 @@
                 "operation": "update",
                 "filepath": "terraform.tfvars.json",
                 "branch": "req/RITM0000071",
-                "commit_sha": "2fc6942309da754801bb8613b74fc7f5bbfa4880"
+                "commit_sha": "9af572cb64cd3a198713a89943035f89d4f66c54"
             }
         },
         "service_arch_data": {},
